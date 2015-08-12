@@ -1,8 +1,7 @@
 ### Place information about your pack version here.
 ---
 name: google_tts
-description: google_tts
-version: 0.0.1
-author: jfryman
-email: jfryman@FryBook
-
+description: StackStorm Google TTS integration Pack
+version: 0.1.0
+author: James Fryman
+email: james@fryman.io
