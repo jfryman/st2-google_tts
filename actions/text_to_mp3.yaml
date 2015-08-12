@@ -1,0 +1,22 @@
+---
+name: "text_to_mp3"
+runner_type: "run-python"
+description: "Convert text to speech using Google TTS engine"
+enabled: true
+entry_point: "text_to_mp3.py"
+parameters:
+  text:
+    type: "string"
+    description: "Text to translate"
+    required: true
+  output_dir:
+    type: "string"
+    description: "Output directory to write 'speech.mp3'. Will be overwritten"
+    required: true
+  language:
+    type: "string"
+    description: "Language to translate"
+    default: "en"
+  alert:
+    type: "string"
+    description: "Full path to MP3 to be appended to TTS"
