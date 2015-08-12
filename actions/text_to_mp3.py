@@ -5,8 +5,8 @@ from time import sleep
 
 
 class TextToMp3Action(Action):
-    def run(self, text, output_dir, lang='en', alert=None):
-        status, file_name = self.text2mp3(text, output_dir, lang, alert)
+    def run(self, text, output_dir, language='en', alert=None):
+        status, file_name = self.text2mp3(text, output_dir, language, alert)
         payload = { 'status': status, 'file_name': file_name }
         if ok:
             return payload
