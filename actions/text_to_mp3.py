@@ -2,7 +2,7 @@ from st2actions.runners.pythonrunner import Action
 import urllib2, sys
 from datetime import datetime
 from time import sleep
-import os
+import os, stat
 
 
 class TextToMp3Action(Action):
@@ -10,7 +10,7 @@ class TextToMp3Action(Action):
         status, file_name = self.text2mp3(text, output_dir, language, alert)
         payload = { 'status': status, 'file_name': file_name }
         if status:
-            os.chmod(file_name, 666)
+            os.chmod(file_name, 436)
             return payload
         else:
             raise Exception(payload)
