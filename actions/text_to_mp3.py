@@ -10,7 +10,7 @@ class TextToMp3Action(Action):
         status, file_name = self.text2mp3(text, output_dir, language, alert)
         payload = { 'status': status, 'file_name': file_name }
         if status:
-            os.chmod(file_name, '0666')
+            os.chmod(file_name, 666)
             return payload
         else:
             raise Exception(payload)
